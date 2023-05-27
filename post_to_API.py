@@ -8,7 +8,7 @@ import requests
 import json
 
 #url = "enter heroku web app url here"
-url = "https://python-app1.herokuapp.com/"
+url = "https://python-app1.herokuapp.com/inference"
 
 
 # explicit the sample to perform inference on
