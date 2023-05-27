@@ -12,19 +12,19 @@ url = "https://python-app1.herokuapp.com/inference"
 
 
 # explicit the sample to perform inference on
-sample =  { 'age':50,
-            'workclass':"Private", 
-            'fnlgt':234721,
-            'education':"Doctorate",
-            'education_num':16,
-            'marital_status':"Separated",
+sample =  { 'age':43,
+            'workclass':"Self-emp-not-inc", 
+            'fnlgt': 292175,
+            'education':"Masters",
+            'education_num':14,
+            'marital_status':"Divorced",
             'occupation':"Exec-managerial",
-            'relationship':"Not-in-family",
-            'race':"Black",
+            'relationship':"Unmarried",
+            'race':"White",
             'sex':"Female",
-            'capital_gain':0,
+            'capital_gain':50000,
             'capital_loss':0,
-            'hours_per_week':50,
+            'hours_per_week':45,
             'native_country':"United-States"
             }
 

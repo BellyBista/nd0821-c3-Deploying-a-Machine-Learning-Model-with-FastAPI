@@ -61,21 +61,21 @@ def test_inference_class0():
     """
     Test model inference output for class 0
     """
-    sample =  {  'age':30,
-                'workclass':"Private", 
-                'fnlgt':234721,
-                'education':"HS-grad",
-                'education_num':1,
-                'marital_status':"Separated",
-                'occupation':"Handlers-cleaners",
-                'relationship':"Not-in-family",
-                'race':"Black",
-                'sex':"Male",
-                'capital_gain':0,
+    sample =  { 'age':43,
+                'workclass':"Self-emp-not-inc", 
+                'fnlgt': 292175,
+                'education':"Masters",
+                'education_num':14,
+                'marital_status':"Divorced",
+                'occupation':"Exec-managerial",
+                'relationship':"Unmarried",
+                'race':"White",
+                'sex':"Female",
+                'capital_gain':50000,
                 'capital_loss':0,
-                'hours_per_week':35,
+                'hours_per_week':45,
                 'native_country':"United-States"
-            }
+                }
 
     data = json.dumps(sample)
 
@@ -83,12 +83,12 @@ def test_inference_class0():
 
     # test response and output
     assert r.status_code == 200
-    assert r.json()["age"] == 30
-    assert r.json()["fnlgt"] == 234721
+    assert r.json()["age"] == 43
+    assert r.json()["fnlgt"] == 292175
 
     # test prediction vs expected label
     logging.info(f'********* prediction = {r.json()["prediction"]} ********')
-    assert r.json()["prediction"][0] == '<=50K'
+    assert r.json()["prediction"][0:] == '>50K'
 
 
 def test_wrong_inference_query():
