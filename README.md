@@ -1,4 +1,32 @@
-Working in a command line environment is recommended for ease of use with git and dvc. If on Windows, WSL1 or 2 is recommended.
+# Project Overview
+
+This project is part of Udacity's ML DevOps Engineer nanodegree, specifically focusing on deploying a machine learning model with FastAPI on Heroku.
+
+The project encompasses the following steps:
+
+- Training a machine learning model for a classification task that predicts the salary group of individuals based on 14 different characteristics. The model uses a salary threshold of $50,000. You can refer to the detailed modelCard for more information about the model and the dataset used.
+
+- Creating a FastAPI application to expose the trained model for inference.
+
+- Deploying the FastAPI application on Heroku to provide an inference endpoint.
+
+- Implementing a Continuous Integration / Continuous Deployment (CI/CD) workflow using GitHub actions, the GitHub repository, and integrating it with Heroku. The application will only be deployed if the automated tests, validated by GitHub actions, pass successfully after any modifications are made.
+
+## Using the API Client
+
+- The main.py application is deployed to Heroku from a GitHub repository with CI/CD enabled. All implementation steps, from creating the Heroku app to deployment, are operated through the Heroku GUI. Automatic deployments are triggered only if the continuous integration validation in GitHub actions passes successfully.
+
+- To deploy the application on Heroku, certain key files are required, including Procfile, requirements.txt, Python scripts, and saved models. The compressed slug size of the Heroku deployment is 119Mb.
+
+- Once the application is deployed and the Heroku app URL is accessed in a browser, a welcome message is displayed.
+
+- Inference can be performed by using the dedicated script post_to_API.py. This script sends a sample item with 14 features to the app's inference endpoint, and it receives the prediction along with the details of the submitted sample item. The inference process is executed by the main.py module, which utilizes the trained model and the OH encoder saved in the ./model folder."
+
+
+
+
+
+
 
 # Environment Set up
 * Download and install conda if you don’t have it already.
